@@ -18,14 +18,6 @@
   -webkit-text-size-adjust: 100%;
 } */
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 a {
   font-weight: 500;
@@ -83,15 +75,6 @@ button:focus-visible {
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -159,9 +142,9 @@ h1 {
 
 .topnav{
   background-color: black;
-  top: 0px;
   overflow: hidden;
   position:relative;
+  z-index: 99;
   margin-left: 0px;
 }
 
@@ -180,4 +163,20 @@ a.active{
   font-size: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 30px 16px;
+}
+
+button {
+  @apply  font-bold text-white text-sm px-6 py-2 rounded-md transition-all duration-200
+}
+
+.button-primary {
+  @apply bg-blue-500 hover:bg-blue-400
+}
+
+.button-secondary {
+  @apply bg-gray-300 text-gray-500 hover:bg-white
+}
+
+.button-shop{
+  @apply hover:bg-slate-900 hover:text-gray-50 transition-all duration-200 bg-gray-300 text-black py-3 px-10  focus:ring focus:ring-blue-300 focus:ring-opacity-80 focus:outline-none
 }
